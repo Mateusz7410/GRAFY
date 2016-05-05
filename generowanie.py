@@ -25,4 +25,5 @@ if __name__ == "__main__":
     n=10
     tab=[]
     generate(n,tab)
-    print(tab)
+    for i in tab:
+        print(i)
