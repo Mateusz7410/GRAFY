@@ -6,8 +6,12 @@ def generate(n,tab):
             pom.append(0)
         tab.append(pom)
     tmp = int((n * (n - 1)) / 4)
-    for i in range(n-1):
-        tab[i][n-1]=1
+    for i in range(n-2):
+        c=random.randint(i+1,n-1)
+        tab[i][c]=1
+        tmp-=1
+    if tab[n-2][n-1]==0:
+        tab[n-2][n-1]=1
         tmp-=1
     while tmp!=0:
         i=random.randint(0,n-2)
@@ -18,7 +22,7 @@ def generate(n,tab):
 
 
 if __name__ == "__main__":
-    n=6
+    n=10
     tab=[]
     generate(n,tab)
     print(tab)
