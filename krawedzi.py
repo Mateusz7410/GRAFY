@@ -11,10 +11,12 @@ def krawedzi(n,tab,kraw):
             pom=[]
 
 if __name__ == "__main__":
-    n=5
+    n=10
     tab=[]
     generowanie.generate(n,tab)
-    print(tab)
+    for i in tab:
+        print(i)
     kraw=[]
     krawedzi(n,tab,kraw)
-    print(kraw)
+    for i in kraw:
+        print(i)
