@@ -70,9 +70,9 @@ def DFS_krawedzie(n, kraw, dfs, start):
             s.pop()
             if odwiedzone[v1] == False:
                 odwiedzone[v1] = True
-                for i in nast[v1]:
-                    if odwiedzone[i] == False:
-                        s.push(i)
+                for i in range(len(kraw)-1):
+                    if kraw[i][0] == v1:
+                        s.push(kraw[i][1])
                 dfs.append(v1)
         if False in odwiedzone:
             s.push(odwiedzone.index(False))
@@ -95,5 +95,5 @@ if __name__ == "__main__":
     dfs = []
     kraw = []
     krawedzi.krawedzi(n,tab,kraw)
-    DFS_krawedzi(n, kraw, dfs, 0)
+    DFS_krawedzie(n, kraw, dfs, 0)
     print(dfs)
