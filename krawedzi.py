@@ -20,3 +20,4 @@ if __name__ == "__main__":
     krawedzi(n,tab,kraw)
     for i in kraw:
         print(i)
+    print(kraw)

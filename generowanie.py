@@ -16,6 +16,8 @@ def generate(n,tab):
         if tab[i][j]==0:
             tab[i][j]=1
             tmp-=1
+    for i in tab:
+        print(i)
 
 
 if __name__ == "__main__":

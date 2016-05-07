@@ -5,9 +5,7 @@ import macierz
 import time
 
 def BFS_sasiedztwa(n,tab,bfs):
-    pom=[]
-    for i in range(n):
-        pom.append(0)
+    pom=[0]*n
     for i in range(n):
         for j in range(n):
             if tab[j][i]==1:
@@ -24,9 +22,7 @@ def BFS_sasiedztwa(n,tab,bfs):
                         pom[j]-=1
 
 def BFS_nastepniki(n,nast,bfs):
-    pom = []
-    for i in range(n):
-        pom.append(0)
+    pom = [0]*n
     for i in range(n):
         for j in range(len(nast[i])):
             pom[nast[i][j]]+=1
@@ -41,9 +37,7 @@ def BFS_nastepniki(n,nast,bfs):
                     pom[nast[i][j]]-=1
 
 def BFS_krawedzi(n,kraw,bfs):
-    pom = []
-    for i in range(n):
-        pom.append(0)
+    pom = [0]*n
     for i in range(len(kraw)):
         pom[kraw[i][1]]+=1
     tmp = n
@@ -58,9 +52,7 @@ def BFS_krawedzi(n,kraw,bfs):
                         pom[kraw[j][1]]-=1
 
 def BFS_macierz(n,macie,bfs,npb):
-    pom = []
-    for i in range(n):
-        pom.append(0)
+    pom = [0]*n
     for i in range(n):
         if npb[i][0] != (-1):
             pom[npb[i][0]] += 1
@@ -86,7 +78,7 @@ def BFS_macierz(n,macie,bfs,npb):
                         pom[j]-=1
 
 if __name__ == "__main__":
-    n=3000
+    n=30
     tab=[]
     generowanie.generate(n,tab)
     print(tab)
