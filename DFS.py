@@ -81,32 +81,32 @@ def DFS_krawedzie(n, kraw, dfs, start):
 
 if __name__ == "__main__":
     print("DFS \n\n\n")
-    plik = open("plik2.csv", "w")
-    for i in range(100, 1000, 100):
+    plik = open("plik2_bezgenerowania.csv", "w")
+    for i in range(200, 3001, 200):
         n = i
         start = time.time()
         tab = []
         generowanie.generate(n, tab)
         wynik = time.time() - start
         plik.write("Generowanie;{};{}\n".format(i, wynik))
-        start = time.time()
         dfs = []
+        start = time.time()
         DFS_sasiedztwa(n, tab, dfs, 0)
         wynik = time.time() - start
         plik.write("dfs_sasiedztwa;{};{}\n".format(i, wynik))
         print(dfs)
-        start = time.time()
         dfs = []
         nast = []
         nastepniki.nastepniki(n, tab, nast)
+        start = time.time()
         DFS_nastepniki(n, nast, dfs, 0)
         wynik = time.time() - start
         plik.write("dfs_nastepniki;{};{}\n".format(i, wynik))
         print(dfs)
-        start = time.time()
         dfs = []
         kraw = []
         krawedzi.krawedzi(n, tab, kraw)
+        start = time.time()
         DFS_krawedzie(n, kraw, dfs, 0)
         wynik = time.time() - start
         plik.write("dfs_krawedzie;{};{}\n".format(i, wynik))
