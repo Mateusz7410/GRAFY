@@ -81,7 +81,7 @@ def DFS_krawedzie(n, kraw, dfs, start):
 
 if __name__ == "__main__":
     print("DFS \n\n\n")
-    plik = open("plik1.csv", "w")
+    plik = open("plik2.csv", "w")
     for i in range(100, 1000, 100):
         n = i
         start = time.time()
